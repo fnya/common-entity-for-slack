@@ -25,6 +25,12 @@ export class Initialize {
   /** JWT 秘密鍵 */
   public jwtSecret: string;
 
+  /** JWT リフレッシュトークン有効期間(日数) */
+  public refreshTokenEffectiveDays: string;
+
+  /** Slack API トークン */
+  public slackApiToken: string;
+
   /**
    * Initialize のコンストラクタ
    *
@@ -35,6 +41,8 @@ export class Initialize {
    * @param stretchingCount ストレッチ回数
    * @param pepper ペッパー(システム全体のソルト)
    * @param jwtSecret JWT 秘密鍵
+   * @param refreshTokenEffectiveDays JWT リフレッシュトークン有効期間(日数)
+   * @param slackApiToken Slack API トークン
    */
   public constructor(
     requestType: RequestType,
@@ -43,7 +51,9 @@ export class Initialize {
     rePassword: string,
     stretchingCount: string,
     pepper: string,
-    jwtSecret: string
+    jwtSecret: string,
+    refreshTokenEffectiveDays: string,
+    slackApiToken: string
   ) {
     this.requestType = requestType;
     this.email = email;
@@ -52,5 +62,7 @@ export class Initialize {
     this.stretchingCount = stretchingCount;
     this.pepper = pepper;
     this.jwtSecret = jwtSecret;
+    this.refreshTokenEffectiveDays = refreshTokenEffectiveDays;
+    this.slackApiToken = slackApiToken;
   }
 }
