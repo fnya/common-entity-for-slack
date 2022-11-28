@@ -22,14 +22,27 @@ export class Initialize {
   /** ペッパー(システム全体のソルト) */
   public pepper: string;
 
+  /** JWT 発行者 */
+  public jwtIssuer: string;
+
   /** JWT 秘密鍵 */
   public jwtSecret: string;
+
+  /** JWT アクセストークン有効期間(分) */
+  public accessTokenEffectiveMinutes: string;
 
   /** JWT リフレッシュトークン有効期間(日数) */
   public refreshTokenEffectiveDays: string;
 
   /** Slack API トークン */
   public slackApiToken: string;
+
+  /**
+   * Slack のパーミッション(カンマ区切りで指定)
+   *   チャンネル: public_channel,private_channel
+   *   DM: im,mpim
+   * */
+  public slackPermissions: string;
 
   /**
    * Initialize のコンストラクタ
@@ -40,9 +53,12 @@ export class Initialize {
    * @param rePassword 管理者のパスワード(再入力)
    * @param stretchingCount ストレッチ回数
    * @param pepper ペッパー(システム全体のソルト)
+   * @param jwtIssuer JWT 発行者
    * @param jwtSecret JWT 秘密鍵
+   * @param accessTokenEffectiveMinutes JWT アクセストークン有効期間(分)
    * @param refreshTokenEffectiveDays JWT リフレッシュトークン有効期間(日数)
    * @param slackApiToken Slack API トークン
+   * @param slackPermissions Slack のパーミッション(カンマ区切りで指定)
    */
   public constructor(
     requestType: RequestType,
@@ -51,9 +67,12 @@ export class Initialize {
     rePassword: string,
     stretchingCount: string,
     pepper: string,
+    jwtIssuer: string,
     jwtSecret: string,
+    accessTokenEffectiveMinutes: string,
     refreshTokenEffectiveDays: string,
-    slackApiToken: string
+    slackApiToken: string,
+    slackPermissions: string
   ) {
     this.requestType = requestType;
     this.email = email;
@@ -61,8 +80,11 @@ export class Initialize {
     this.rePassword = rePassword;
     this.stretchingCount = stretchingCount;
     this.pepper = pepper;
+    this.jwtIssuer = jwtIssuer;
     this.jwtSecret = jwtSecret;
+    this.accessTokenEffectiveMinutes = accessTokenEffectiveMinutes;
     this.refreshTokenEffectiveDays = refreshTokenEffectiveDays;
     this.slackApiToken = slackApiToken;
+    this.slackPermissions = slackPermissions;
   }
 }
