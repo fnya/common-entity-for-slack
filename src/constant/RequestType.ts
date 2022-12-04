@@ -1,6 +1,7 @@
 export const RequestType = {
   Initialize: 'initialize',
   Login: 'login',
+  RegisterUser: 'registerUser',
 } as const;
 
 // eslint-disable-next-line no-redeclare
