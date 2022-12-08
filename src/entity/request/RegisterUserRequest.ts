@@ -7,38 +7,38 @@ export class RegisterUserRequest {
   /** リクエストタイプ */
   public requestType: RequestType;
 
-  /** メールアドレス */
+  /** 登録ユーザーのメールアドレス */
   public email: string;
 
-  /** 管理者フラグ(true:管理者/false:一般ユーザー) */
+  /** 登録ユーザーの管理者フラグ(true:管理者/false:一般ユーザー) */
   public isAdmin: boolean;
 
-  /** 権限のあるプライベートチャンネルのリスト */
+  /** 登録ユーザーの権限のあるプライベートチャンネルのリスト */
   public channels: string[];
 
   /** 管理者のアクセストークン */
-  public adminAccessToken: string;
+  public accessToken: string;
 
   /**
    * ユーザー登録リクエストのコンストラクタ
    *
    * @param requestType リクエストタイプ
-   * @param email メールアドレス
-   * @param isAdmin 管理者フラグ(true:管理者/false:一般ユーザー)
-   * @param channels 権限のあるプライベートチャンネルのリスト
-   * @param adminAccessToken 管理者のアクセストークン
+   * @param email 登録ユーザーのメールアドレス
+   * @param isAdmin 登録ユーザーの管理者フラグ(true:管理者/false:一般ユーザー)
+   * @param channels 登録ユーザーの権限のあるプライベートチャンネルのリスト
+   * @param accessToken 管理者のアクセストークン
    */
   public constructor(
     requestType: RequestType,
     email: string,
     isAdmin: boolean,
     channels: string[],
-    adminAccessToken: string
+    accessToken: string
   ) {
     this.requestType = requestType;
     this.email = email;
     this.isAdmin = isAdmin;
     this.channels = channels;
-    this.adminAccessToken = adminAccessToken;
+    this.accessToken = accessToken;
   }
 }
