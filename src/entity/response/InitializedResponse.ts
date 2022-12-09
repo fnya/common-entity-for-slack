@@ -11,29 +11,41 @@ export class InitializedResponse {
   /** HTTP ステータスコード */
   public httpStatusCode: HttpStatusCode;
 
+  /** ユーザー ID */
+  public userId: string;
+
   /** JWT のアクセストークン */
   public accessToken: string;
 
   /** JWT のリフレッシュトークン */
   public refreshToken: string;
 
+  /** JWT のリフレッシュトークン有効期限 */
+  public refreshTokenExpires: number;
+
   /**
    * InitializedResponse のコンストラクタ
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
+   * @param userId ユーザー ID
    * @param accessToken JWT のアクセストークン
    * @param refreshToken JWT のリフレッシュトークン
+   * @param refreshTokenExpires JWT のリフレッシュトークン有効期限
    */
   public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
+    userId: string,
     accessToken: string,
-    refreshToken: string
+    refreshToken: string,
+    refreshTokenExpires: number
   ) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
+    this.userId = userId;
     this.accessToken = accessToken;
     this.refreshToken = refreshToken;
+    this.refreshTokenExpires = refreshTokenExpires;
   }
 }
