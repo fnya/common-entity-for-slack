@@ -7,8 +7,8 @@ export class Login {
   /** リクエストタイプ */
   public requestType: RequestType;
 
-  /** メールアドレス */
-  public email: string;
+  /** ユーザー ID */
+  public userId: string;
 
   /** パスワード */
   public password: string;
@@ -17,16 +17,16 @@ export class Login {
    * ログインリクエストのコンストラクタ
    *
    * @param requestType リクエストタイプ
-   * @param email メールアドレス
+   * @param userId  ユーザー ID
    * @param password パスワード
    */
   public constructor(
     requestType: RequestType,
-    email: string,
+    userId: string,
     password: string
   ) {
     this.requestType = requestType;
-    this.email = email;
+    this.userId = userId;
     this.password = password;
   }
 }
