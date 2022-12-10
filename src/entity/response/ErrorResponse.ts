@@ -15,13 +15,13 @@ export class ErrorResponse {
   public message: string;
 
   /**
-   * ErrorResponse のコンストラクタ
+   * コンストラクタ
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
    * @param message メッセージ
    */
-  public constructor(
+  constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     message: string

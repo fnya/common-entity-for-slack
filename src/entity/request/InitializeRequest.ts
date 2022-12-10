@@ -1,9 +1,9 @@
 import { RequestType } from '../../constant/RequestType';
 
 /**
- * viewer-api-for-slack を初期化するクラス
+ * 初期化リクエストクラス
  */
-export class Initialize {
+export class InitializeRequest {
   /** リクエストタイプ */
   public requestType: RequestType;
 
@@ -48,7 +48,7 @@ export class Initialize {
   public slackPermissions: string;
 
   /**
-   * Initialize のコンストラクタ
+   * コンストラクタ
    *
    * @param requestType リクエストタイプ
    * @param email 管理者のメールアドレス
@@ -64,7 +64,7 @@ export class Initialize {
    * @param slackApiToken Slack API トークン
    * @param slackPermissions Slack のパーミッション(カンマ区切りで指定)
    */
-  public constructor(
+  constructor(
     requestType: RequestType,
     email: string,
     password: string,

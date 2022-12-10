@@ -21,7 +21,7 @@ export class LoginResponse {
   public refreshTokenExpires: number;
 
   /**
-   *  ログインレスポンスクラスのコンストラクタ
+   *  コンストラクタ
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
@@ -29,7 +29,7 @@ export class LoginResponse {
    * @param refreshToken JWT のリフレッシュトークン
    * @param refreshTokenExpires JWT のリフレッシュトークン有効期限
    */
-  public constructor(
+  constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     accessToken: string,

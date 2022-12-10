@@ -12,12 +12,12 @@ export class CommonResponse {
   public httpStatusCode: HttpStatusCode;
 
   /**
-   * CommonResposne のコンストラクタ
+   * コンストラクタ
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
    */
-  public constructor(httpStatus: HttpStatus, httpStatusCode: HttpStatusCode) {
+  constructor(httpStatus: HttpStatus, httpStatusCode: HttpStatusCode) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
   }

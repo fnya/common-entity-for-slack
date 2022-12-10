@@ -20,7 +20,7 @@ export class RegisterUserRequest {
   public accessToken: string;
 
   /**
-   * ユーザー登録リクエストのコンストラクタ
+   * コンストラクタ
    *
    * @param requestType リクエストタイプ
    * @param email 登録ユーザーのメールアドレス
@@ -28,7 +28,7 @@ export class RegisterUserRequest {
    * @param channels 登録ユーザーの権限のあるプライベートチャンネルのリスト
    * @param accessToken 管理者のアクセストークン
    */
-  public constructor(
+  constructor(
     requestType: RequestType,
     email: string,
     isAdmin: boolean,

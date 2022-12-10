@@ -1,28 +1,28 @@
 import { RequestType } from '../../constant/RequestType';
 
 /**
- * ログインリクエストクラス
+ * アクセストークンリフレッシュリクエストクラス
  */
-export class LoginRequest {
+export class RefreshRequest {
   /** リクエストタイプ */
   public requestType: RequestType;
 
   /** ユーザー ID */
   public userId: string;
 
-  /** パスワード */
-  public password: string;
+  /** リフレッシュトークン */
+  public refreshToken: string;
 
   /**
    * コンストラクタ
    *
    * @param requestType リクエストタイプ
    * @param userId  ユーザー ID
-   * @param password パスワード
+   * @param refreshToken リフレッシュトークン
    */
-  constructor(requestType: RequestType, userId: string, password: string) {
+  constructor(requestType: RequestType, userId: string, refreshToken: string) {
     this.requestType = requestType;
     this.userId = userId;
-    this.password = password;
+    this.refreshToken = refreshToken;
   }
 }
