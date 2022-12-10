@@ -1,1 +1,1 @@
-# common-entity-for-slack
+# @fnya/common-entity-for-slack

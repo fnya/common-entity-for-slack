@@ -1,5 +1,5 @@
 {
-  "name": "common-entity-for-slack",
+  "name": "@fnya/common-entity-for-slack",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,10 @@
   },
   "author": "fnya",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fnya/common-entity-for-slack"
+  },
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
