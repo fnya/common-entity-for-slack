@@ -1,9 +1,11 @@
 export const RequestType = {
-  GetChannels: 'getChannels',
-  Initialize: 'initialize',
-  Login: 'login',
-  Refresh: 'refresh',
-  RegisterUser: 'registerUser',
+  GetChannels: 'GetChannels',
+  Initialize: 'Initialize',
+  InitializeUser: 'InitializeUser',
+  InitializeUserWithToken: 'InitializeUserWithToken',
+  Login: 'Login',
+  RefreshToken: 'RefreshToken',
+  RegisterUser: 'RegisterUser',
 } as const;
 
 // eslint-disable-next-line no-redeclare
