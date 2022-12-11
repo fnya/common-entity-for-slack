@@ -47,6 +47,9 @@ export class InitializeRequest {
    * */
   public slackPermissions: string;
 
+  /** ユーザー初期化トークン有効時間(分) */
+  public userTokenEffectiveMinutes: string;
+
   /**
    * コンストラクタ
    *
@@ -63,6 +66,7 @@ export class InitializeRequest {
    * @param refreshTokenEffectiveDays JWT リフレッシュトークン有効期間(日数)
    * @param slackApiToken Slack API トークン
    * @param slackPermissions Slack のパーミッション(カンマ区切りで指定)
+   * @param userTokenEffectiveMinutes ユーザー初期化トークン有効時間(分)
    */
   constructor(
     requestType: RequestType,
@@ -77,7 +81,8 @@ export class InitializeRequest {
     accessTokenEffectiveMinutes: string,
     refreshTokenEffectiveDays: string,
     slackApiToken: string,
-    slackPermissions: string
+    slackPermissions: string,
+    userTokenEffectiveMinutes: string
   ) {
     this.requestType = requestType;
     this.email = email;
@@ -92,5 +97,6 @@ export class InitializeRequest {
     this.refreshTokenEffectiveDays = refreshTokenEffectiveDays;
     this.slackApiToken = slackApiToken;
     this.slackPermissions = slackPermissions;
+    this.userTokenEffectiveMinutes = userTokenEffectiveMinutes;
   }
 }
