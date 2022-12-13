@@ -3,16 +3,16 @@ import { HttpStatus } from '../../constant/HttpStatus';
 import { HttpStatusCode } from '../../constant/HttpStatusCode';
 
 /**
- * チャンネル一覧取得レスポンスクラス
+ * ユーザーに権限のあるチャンネル一覧取得レスポンスクラス
  */
-export class GetChannelsResponse {
+export class GetUsersChannelsResponse {
   /** HTTP ステータス */
   public httpStatus: HttpStatus;
 
   /** HTTP ステータスコード */
   public httpStatusCode: HttpStatusCode;
 
-  /** チャンネル一覧 */
+  /** チャンネル一覧 (public + 権限のある private channel) */
   public channels: ChannelEntity[];
 
   /**

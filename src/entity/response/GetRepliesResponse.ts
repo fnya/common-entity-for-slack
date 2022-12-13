@@ -1,34 +1,34 @@
-import { ChannelEntity } from './entity/ChannelEntity';
 import { HttpStatus } from '../../constant/HttpStatus';
 import { HttpStatusCode } from '../../constant/HttpStatusCode';
+import { ReplyEntity } from './entity/ReplyEntity';
 
 /**
- * チャンネル一覧取得レスポンスクラス
+ * リプライ一覧レスポンス
  */
-export class GetChannelsResponse {
+export class GetRepliesResponse {
   /** HTTP ステータス */
   public httpStatus: HttpStatus;
 
   /** HTTP ステータスコード */
   public httpStatusCode: HttpStatusCode;
 
-  /** チャンネル一覧 */
-  public channels: ChannelEntity[];
+  /** メッセージ一覧 */
+  public replies: ReplyEntity[];
 
   /**
-   *  コンストラクタ
+   * コンストラクタ
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
-   * @param channels チャンネル一覧
+   * @param replies リプライ一覧
    */
   constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
-    channels: ChannelEntity[]
+    replies: ReplyEntity[]
   ) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
-    this.channels = channels;
+    this.replies = replies;
   }
 }

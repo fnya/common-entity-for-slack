@@ -1,5 +1,5 @@
-export class Channel {
-  /** 11 桁の Slack channel id */
+export class ChannelEntity {
+  /** チャンネル ID */
   public id: string;
 
   /** 表示名 */
@@ -11,7 +11,7 @@ export class Channel {
   /**
    * コンストラクタ
    *
-   * @param id 11 桁の Slack channel id
+   * @param id チャンネル ID
    * @param name 表示名
    * @param isPrivate プライベートチャンネルか
    */
