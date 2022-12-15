@@ -7,6 +7,9 @@ export class ChangePasswordRequest {
   /** リクエストタイプ */
   public requestType: RequestType;
 
+  /** ユーザー ID */
+  public userId: string;
+
   /** 旧パスワード */
   public oldPassword: string;
 
@@ -23,6 +26,7 @@ export class ChangePasswordRequest {
    * コンストラクタ
    *
    * @param requestType リクエストタイプ
+   * @param userId ユーザー ID
    * @param oldPassword 旧パスワード
    * @param newPassword 新パスワード
    * @param newRePassword 新パスワード(再入力)
@@ -30,12 +34,14 @@ export class ChangePasswordRequest {
    */
   constructor(
     requestType: RequestType,
+    userId: string,
     oldPassword: string,
     newPassword: string,
     newRePassword: string,
     accessToken: string
   ) {
     this.requestType = requestType;
+    this.userId = userId;
     this.oldPassword = oldPassword;
     this.newPassword = newPassword;
     this.newRePassword = newRePassword;

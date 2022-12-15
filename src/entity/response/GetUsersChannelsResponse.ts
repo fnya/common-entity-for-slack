@@ -12,7 +12,7 @@ export class GetUsersChannelsResponse {
   /** HTTP ステータスコード */
   public httpStatusCode: HttpStatusCode;
 
-  /** チャンネル一覧 (public + 権限のある private channel) */
+  /** チャンネル一覧 (public と権限のある private channel) */
   public channels: ChannelEntity[];
 
   /**

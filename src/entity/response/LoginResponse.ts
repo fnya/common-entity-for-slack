@@ -11,6 +11,9 @@ export class LoginResponse {
   /** HTTP ステータスコード */
   public httpStatusCode: HttpStatusCode;
 
+  /** ユーザー ID */
+  public userId: string;
+
   /** JWT のアクセストークン */
   public accessToken: string;
 
@@ -25,6 +28,7 @@ export class LoginResponse {
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
+   * @param userId ユーザー ID
    * @param accessToken JWT のアクセストークン
    * @param refreshToken JWT のリフレッシュトークン
    * @param refreshTokenExpires JWT のリフレッシュトークン有効期限
@@ -32,12 +36,14 @@ export class LoginResponse {
   constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
+    userId: string,
     accessToken: string,
     refreshToken: string,
     refreshTokenExpires: number
   ) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
+    this.userId = userId;
     this.accessToken = accessToken;
     this.refreshToken = refreshToken;
     this.refreshTokenExpires = refreshTokenExpires;

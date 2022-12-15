@@ -14,7 +14,7 @@ export class GetMessagesRequest {
   public accessToken: string;
 
   /** 最大取得件数 */
-  public maxCount?: number;
+  public maxCount: string;
 
   /** 現在取得している最古のts  */
   public oldestTs?: string;
@@ -32,7 +32,7 @@ export class GetMessagesRequest {
     requestType: RequestType,
     channelId: string,
     accessToken: string,
-    maxCount?: number,
+    maxCount: string,
     oldestTs?: string
   ) {
     this.requestType = requestType;

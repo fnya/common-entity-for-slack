@@ -7,8 +7,8 @@ export class LoginRequest {
   /** リクエストタイプ */
   public requestType: RequestType;
 
-  /** ユーザー ID */
-  public userId: string;
+  /** メールアドレス */
+  public email: string;
 
   /** パスワード */
   public password: string;
@@ -17,12 +17,12 @@ export class LoginRequest {
    * コンストラクタ
    *
    * @param requestType リクエストタイプ
-   * @param userId  ユーザー ID
+   * @param email  メールアドレス
    * @param password パスワード
    */
-  constructor(requestType: RequestType, userId: string, password: string) {
+  constructor(requestType: RequestType, email: string, password: string) {
     this.requestType = requestType;
-    this.userId = userId;
+    this.email = email;
     this.password = password;
   }
 }

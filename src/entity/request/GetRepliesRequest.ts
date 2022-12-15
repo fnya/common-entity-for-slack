@@ -3,7 +3,7 @@ import { RequestType } from '../../constant/RequestType';
 /**
  * リプライ一覧取得リクエストクラス
  */
-export class GetRepliesResponse {
+export class GetRepliesRequest {
   /** リクエストタイプ */
   public requestType: RequestType;
 
@@ -17,7 +17,7 @@ export class GetRepliesResponse {
   public accessToken: string;
 
   /** 最大取得件数 */
-  public maxCount?: number;
+  public maxCount: string;
 
   /** 現在取得している最古のts  */
   public oldestTs?: string;
@@ -37,7 +37,7 @@ export class GetRepliesResponse {
     channelId: string,
     parentTs: string,
     accessToken: string,
-    maxCount?: number,
+    maxCount: string,
     oldestTs?: string
   ) {
     this.requestType = requestType;

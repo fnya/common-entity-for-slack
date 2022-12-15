@@ -15,20 +15,26 @@ export class GetMessagesResponse {
   /** メッセージ一覧 */
   public messages: MesssageEntity[];
 
+  /** メッセージが残っているか(true:あり/false:なし) */
+  public hasMore: boolean;
+
   /**
    * コンストラクタ
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
    * @param messages メッセージ一覧
+   * @param hasMore メッセージが残っているか(true:あり/false:なし
    */
   constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
-    messages: MesssageEntity[]
+    messages: MesssageEntity[],
+    hasMore: boolean
   ) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
     this.messages = messages;
+    this.hasMore = hasMore;
   }
 }

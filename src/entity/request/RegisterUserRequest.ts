@@ -11,7 +11,7 @@ export class RegisterUserRequest {
   public email: string;
 
   /** 登録ユーザーの管理者フラグ(true:管理者/false:一般ユーザー) */
-  public isAdmin: boolean;
+  public isAdmin: string;
 
   /** 登録ユーザーの権限のあるプライベートチャンネルのリスト */
   public channels: string[];
@@ -31,7 +31,7 @@ export class RegisterUserRequest {
   constructor(
     requestType: RequestType,
     email: string,
-    isAdmin: boolean,
+    isAdmin: string,
     channels: string[],
     accessToken: string
   ) {
