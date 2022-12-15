@@ -3,9 +3,6 @@ import { ReactionEnitity } from './ReactionEnitity';
 import { UrlEntity } from './UrlEntity';
 
 export class MesssageEntity {
-  /** チャンネル ID */
-  public channelId: string;
-
   /** メッセージのタイムスタンプ  */
   public ts: string;
 
@@ -33,10 +30,12 @@ export class MesssageEntity {
   /** 編集したか */
   public isEdited: boolean;
 
+  /** アバター URL */
+  public userImageUrl?: string;
+
   /**
    * Message のコンストラクタ
    *
-   * @param channelId チャンネル ID
    * @param ts メッセージのタイムスタンプ
    * @param userId ユーザー ID
    * @param userName ユーザー名
@@ -46,9 +45,9 @@ export class MesssageEntity {
    * @param files 添付ファイルのリスト
    * @param urls url のリスト
    * @param isEdited 編集したか
+   * @param userImageUrl アバター URL
    */
   public constructor(
-    channelId: string,
     ts: string,
     userId: string,
     userName: string,
@@ -57,9 +56,9 @@ export class MesssageEntity {
     reactions: ReactionEnitity[],
     files: FileEntity[],
     urls: UrlEntity[],
-    isEdited: boolean
+    isEdited: boolean,
+    userImageUrl?: string
   ) {
-    this.channelId = channelId;
     this.ts = ts;
     this.userId = userId;
     this.userName = userName;
@@ -69,5 +68,6 @@ export class MesssageEntity {
     this.files = files;
     this.urls = urls;
     this.isEdited = isEdited;
+    this.userImageUrl = userImageUrl;
   }
 }

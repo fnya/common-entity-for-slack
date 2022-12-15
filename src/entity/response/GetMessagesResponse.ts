@@ -12,6 +12,12 @@ export class GetMessagesResponse {
   /** HTTP ステータスコード */
   public httpStatusCode: HttpStatusCode;
 
+  /** チャンネル ID */
+  public channelId: string;
+
+  /** チャンネル名 */
+  public channelName: string;
+
   /** メッセージ一覧 */
   public messages: MesssageEntity[];
 
@@ -23,17 +29,23 @@ export class GetMessagesResponse {
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
+   * @param channelId チャンネル ID
+   * @param channelName チャンネル名
    * @param messages メッセージ一覧
    * @param hasMore メッセージが残っているか(true:あり/false:なし
    */
   constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
+    channelId: string,
+    channelName: string,
     messages: MesssageEntity[],
     hasMore: boolean
   ) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
+    this.channelId = channelId;
+    this.channelName = channelName;
     this.messages = messages;
     this.hasMore = hasMore;
   }
