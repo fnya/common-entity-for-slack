@@ -15,7 +15,7 @@ export class FileEntity {
   public fileType: string;
 
   /**
-   * File のコンストラクタ
+   * コンストラクタ
    *
    * @param id ファイル ID
    * @param created 作成日時(yyyy-MM-dd hh:mm:ss)
@@ -23,7 +23,7 @@ export class FileEntity {
    * @param mimeType MIME タイプ(ex. image/png)
    * @param fileType ファイル形式(ex. png)
    */
-  public constructor(
+  constructor(
     id: string,
     created: string,
     name: string,

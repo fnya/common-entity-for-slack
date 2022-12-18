@@ -1,4 +1,4 @@
-export class ReactionEnitity {
+export class ReactionEntity {
   /** リアクション名 */
   public name: string;
 
@@ -6,12 +6,12 @@ export class ReactionEnitity {
   public count: number;
 
   /**
-   * Reaction のコンストラクタ
+   * コンストラクタ
    *
    * @param name リアクション名
    * @param count リアクション数
    */
-  public constructor(name: string, count: number) {
+  constructor(name: string, count: number) {
     this.name = name;
     this.count = count;
   }

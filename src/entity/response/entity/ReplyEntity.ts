@@ -1,5 +1,5 @@
 import { FileEntity } from './FileEntity';
-import { ReactionEnitity } from './ReactionEnitity';
+import { ReactionEntity } from './ReactionEntity';
 import { UrlEntity } from './UrlEntity';
 
 export class ReplyEntity {
@@ -19,7 +19,7 @@ export class ReplyEntity {
   public treadTs: string;
 
   /** リアクションのリスト */
-  public reactions: ReactionEnitity[];
+  public reactions: ReactionEntity[];
 
   /** 添付ファイルのリスト */
   public files: FileEntity[];
@@ -34,7 +34,7 @@ export class ReplyEntity {
   public userImageUrl?: string;
 
   /**
-   * Reply のコンストラクタ
+   * コンストラクタ
    *
    * @param ts メッセージのタイムスタンプ
    * @param userId ユーザー ID
@@ -47,13 +47,13 @@ export class ReplyEntity {
    * @param isEdited 編集したか
    * @param userImageUrl アバター URL
    */
-  public constructor(
+  constructor(
     ts: string,
     userId: string,
     userName: string,
     text: string,
     treadTs: string,
-    reactions: ReactionEnitity[],
+    reactions: ReactionEntity[],
     files: FileEntity[],
     urls: UrlEntity[],
     isEdited: boolean,
