@@ -21,9 +21,6 @@ export class GetRepliesResponse {
   /** リプライ一覧 */
   public replies: ReplyEntity[];
 
-  /** リプライが残っているか(true:あり/false:なし) */
-  public hasMore: boolean;
-
   /**
    * コンストラクタ
    *
@@ -32,21 +29,18 @@ export class GetRepliesResponse {
    * @param channelId チャンネル ID
    * @param channelName チャンネル名
    * @param replies リプライ一覧
-   * @param hasMore リプライが残っているか(true:あり/false:なし)
    */
   constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     channelId: string,
     channelName: string,
-    replies: ReplyEntity[],
-    hasMore: boolean
+    replies: ReplyEntity[]
   ) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
     this.channelId = channelId;
     this.channelName = channelName;
     this.replies = replies;
-    this.hasMore = hasMore;
   }
 }
