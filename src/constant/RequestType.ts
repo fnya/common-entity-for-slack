@@ -11,7 +11,11 @@ export const RequestType = {
   InitializeUserWithToken: 'InitializeUserWithToken',
   Login: 'Login',
   RefreshToken: 'RefreshToken',
+  RegisterTriggers: 'RegisterTriggers',
   RegisterUser: 'RegisterUser',
+  RemoveTriggers: 'RemoveTriggers',
+  ResetPassword: 'ResetPassword',
+  ResetPasswordWithToken: 'ResetPasswordWithToken',
 } as const;
 
 // eslint-disable-next-line no-redeclare

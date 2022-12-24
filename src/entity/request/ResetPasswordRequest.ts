@@ -1,14 +1,11 @@
 import { RequestType } from '../../constant/RequestType';
 
 /**
- * ユーザー情報取得リクエストクラス
+ * パスワードリセットリクエストクラス
  */
-export class GetUserInformationRequest {
+export class ResetPasswordRequest {
   /** リクエストタイプ */
   public requestType: RequestType;
-
-  /** アクセストークン */
-  public accessToken: string;
 
   /** メールアドレス */
   public email: string;
@@ -17,12 +14,10 @@ export class GetUserInformationRequest {
    * コンストラクタ
    *
    * @param requestType リクエストタイプ
-   * @param accessToken アクセストークン
    * @param email メールアドレス
    */
-  constructor(requestType: RequestType, accessToken: string, email: string) {
+  constructor(requestType: RequestType, email: string) {
     this.requestType = requestType;
-    this.accessToken = accessToken;
     this.email = email;
   }
 }
