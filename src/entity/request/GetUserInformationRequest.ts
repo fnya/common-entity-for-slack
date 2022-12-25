@@ -10,7 +10,7 @@ export class GetUserInformationRequest {
   /** アクセストークン */
   public accessToken: string;
 
-  /** メールアドレス */
+  /** 取得対象ユーザーのメールアドレス */
   public email: string;
 
   /**
@@ -18,7 +18,7 @@ export class GetUserInformationRequest {
    *
    * @param requestType リクエストタイプ
    * @param accessToken アクセストークン
-   * @param email メールアドレス
+   * @param email 取得対象ユーザーのメールアドレス
    */
   constructor(requestType: RequestType, accessToken: string, email: string) {
     this.requestType = requestType;

@@ -13,16 +13,13 @@ export class ChangeUserInformationRequest {
   /** ユーザー ID */
   public userId: string;
 
-  /** メールアドレス */
-  public email?: string;
-
   /** 権限のあるプライベートチャンネルのリスト */
   public channels?: string;
 
-  /** 管理者フラグ(true:管理者/false:一般ユーザー)/admin only */
+  /** 管理者フラグ(true:管理者/false:一般ユーザー) */
   public isAdmin?: string;
 
-  /** 初期化フラグ(true:初期化済み/false:未初期化)/admin only */
+  /** 初期化フラグ(falseのみ,指定されたらユーザーを初期化する) */
   public initialized?: string;
 
   /**
@@ -31,16 +28,14 @@ export class ChangeUserInformationRequest {
    * @param requestType リクエストタイプ
    * @param accessToken アクセストークン
    * @param userId ユーザー ID
-   * @param email メールアドレス
    * @param channels 権限のあるプライベートチャンネルのリスト
-   * @param isAdmin 管理者フラグ(true:管理者/false:一般ユーザー)/admin only
-   * @param initialized 初期化フラグ(true:初期化済み/false:未初期化)/admin only
+   * @param isAdmin 管理者フラグ(true:管理者/false:一般ユーザー)
+   * @param initialized 初期化フラグ(falseのみ,指定されたらユーザーを初期化する)
    */
   constructor(
     requestType: RequestType,
     accessToken: string,
     userId: string,
-    email?: string,
     channels?: string,
     isAdmin?: string,
     initialized?: string
@@ -48,7 +43,6 @@ export class ChangeUserInformationRequest {
     this.requestType = requestType;
     this.accessToken = accessToken;
     this.userId = userId;
-    this.email = email;
     this.channels = channels;
     this.isAdmin = isAdmin;
     this.initialized = initialized;
