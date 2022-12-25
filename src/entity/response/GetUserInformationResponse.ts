@@ -1,4 +1,3 @@
-import { ChannelEntity } from './entity/ChannelEntity';
 import { HttpStatus } from '../../constant/HttpStatus';
 import { HttpStatusCode } from '../../constant/HttpStatusCode';
 
@@ -25,7 +24,7 @@ export class GetUserInformationResponse {
   public initialized: boolean;
 
   /** チャンネル一覧 (権限のあるプライベートチャンネルのリスト) */
-  public channels: ChannelEntity[];
+  public channels: string[];
 
   /**
    *  コンストラクタ
@@ -45,7 +44,7 @@ export class GetUserInformationResponse {
     email: string,
     isAdmin: boolean,
     initialized: boolean,
-    channels: ChannelEntity[]
+    channels: string[]
   ) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
