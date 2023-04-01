@@ -16,9 +16,6 @@ export class InitializeRequest {
   /** 管理者のパスワード(再入力) */
   public rePassword: string;
 
-  /** 管理者がアクセス可能なプライベートチャンネル('["c1","c2"]') */
-  public channels: string;
-
   /** ストレッチ回数 */
   public stretchingCount: string;
 
@@ -57,7 +54,6 @@ export class InitializeRequest {
    * @param email 管理者のメールアドレス
    * @param password 管理者のパスワード
    * @param rePassword 管理者のパスワード(再入力)
-   * @param channels 管理者がアクセス可能なプライベートチャンネル('["c1","c2"]')
    * @param stretchingCount ストレッチ回数
    * @param pepper ペッパー(システム全体のソルト)
    * @param jwtIssuer JWT 発行者
@@ -73,7 +69,6 @@ export class InitializeRequest {
     email: string,
     password: string,
     rePassword: string,
-    channels: string,
     stretchingCount: string,
     pepper: string,
     jwtIssuer: string,
@@ -88,7 +83,6 @@ export class InitializeRequest {
     this.email = email;
     this.password = password;
     this.rePassword = rePassword;
-    this.channels = channels;
     this.stretchingCount = stretchingCount;
     this.pepper = pepper;
     this.jwtIssuer = jwtIssuer;
