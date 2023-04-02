@@ -21,7 +21,7 @@ export class ErrorResponse {
    * @param httpStatusCode HTTP ステータスコード
    * @param message メッセージ
    */
-  constructor(
+  public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     message: string

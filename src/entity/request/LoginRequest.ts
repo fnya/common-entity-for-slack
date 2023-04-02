@@ -20,7 +20,11 @@ export class LoginRequest {
    * @param email  メールアドレス
    * @param password パスワード
    */
-  constructor(requestType: RequestType, email: string, password: string) {
+  public constructor(
+    requestType: RequestType,
+    email: string,
+    password: string
+  ) {
     this.requestType = requestType;
     this.email = email;
     this.password = password;

@@ -21,7 +21,7 @@ export class InitializeUserResponse {
    * @param httpStatusCode HTTP ステータスコード
    * @param token トークン
    */
-  constructor(
+  public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     token: string

@@ -20,7 +20,11 @@ export class GetUserInformationRequest {
    * @param accessToken アクセストークン
    * @param email 取得対象ユーザーのメールアドレス
    */
-  constructor(requestType: RequestType, accessToken: string, email: string) {
+  public constructor(
+    requestType: RequestType,
+    accessToken: string,
+    email: string
+  ) {
     this.requestType = requestType;
     this.accessToken = accessToken;
     this.email = email;

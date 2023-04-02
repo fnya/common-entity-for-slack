@@ -16,7 +16,7 @@ export class ResetPasswordRequest {
    * @param requestType リクエストタイプ
    * @param email メールアドレス
    */
-  constructor(requestType: RequestType, email: string) {
+  public constructor(requestType: RequestType, email: string) {
     this.requestType = requestType;
     this.email = email;
   }

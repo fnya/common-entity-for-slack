@@ -47,7 +47,7 @@ export class ReplyEntity {
    * @param isEdited 編集したか
    * @param userImageUrl アバター URL
    */
-  constructor(
+  public constructor(
     ts: string,
     userId: string,
     userName: string,

@@ -28,7 +28,7 @@ export class ResetPasswordRequestWithToken {
    * @param rePassword パスワード(再入力)
    * @param token トークン
    */
-  constructor(
+  public constructor(
     requestType: RequestType,
     email: string,
     password: string,

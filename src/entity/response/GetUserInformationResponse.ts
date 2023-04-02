@@ -37,7 +37,7 @@ export class GetUserInformationResponse {
    * @param initialized 初期化フラグ(true:初期化済み/false:未初期化)
    * @param channels チャンネル一覧 (権限のあるプライベートチャンネルのリスト)
    */
-  constructor(
+  public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     id: string,

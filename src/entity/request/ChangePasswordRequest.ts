@@ -32,7 +32,7 @@ export class ChangePasswordRequest {
    * @param newRePassword 新パスワード(再入力)
    * @param accessToken アクセストークン
    */
-  constructor(
+  public constructor(
     requestType: RequestType,
     userId: string,
     oldPassword: string,

@@ -64,7 +64,7 @@ export class InitializeRequest {
    * @param slackPermissions Slack のパーミッション(カンマ区切りで指定)
    * @param userTokenEffectiveMinutes ユーザー初期化トークン有効時間(分)
    */
-  constructor(
+  public constructor(
     requestType: RequestType,
     email: string,
     password: string,

@@ -28,7 +28,7 @@ export class GetMessagesRequest {
    * @param maxCount 最大取得件数
    * @param oldestTs 現在取得している最古のts
    */
-  constructor(
+  public constructor(
     requestType: RequestType,
     channelId: string,
     accessToken: string,

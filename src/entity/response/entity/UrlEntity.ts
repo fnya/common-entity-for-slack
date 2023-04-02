@@ -15,7 +15,7 @@ export class UrlEntity {
    * @param title タイトル
    * @param text 概要
    */
-  constructor(url: string, title: string, text: string) {
+  public constructor(url: string, title: string, text: string) {
     this.url = url;
     this.title = title;
     this.text = text;

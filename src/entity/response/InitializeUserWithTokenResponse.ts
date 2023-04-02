@@ -33,7 +33,7 @@ export class InitializeUserWithTokenResponse {
    * @param refreshToken JWT のリフレッシュトークン
    * @param refreshTokenExpires JWT のリフレッシュトークン有効期限
    */
-  constructor(
+  public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     userId: string,

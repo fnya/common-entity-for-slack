@@ -17,7 +17,7 @@ export class CommonResponse {
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
    */
-  constructor(httpStatus: HttpStatus, httpStatusCode: HttpStatusCode) {
+  public constructor(httpStatus: HttpStatus, httpStatusCode: HttpStatusCode) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
   }

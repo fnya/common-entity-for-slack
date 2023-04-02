@@ -20,7 +20,11 @@ export class RefreshRequest {
    * @param userId  ユーザー ID
    * @param refreshToken リフレッシュトークン
    */
-  constructor(requestType: RequestType, userId: string, refreshToken: string) {
+  public constructor(
+    requestType: RequestType,
+    userId: string,
+    refreshToken: string
+  ) {
     this.requestType = requestType;
     this.userId = userId;
     this.refreshToken = refreshToken;

@@ -23,7 +23,7 @@ export class FileEntity {
    * @param mimeType MIME タイプ(ex. image/png)
    * @param fileType ファイル形式(ex. png)
    */
-  constructor(
+  public constructor(
     id: string,
     created: string,
     name: string,

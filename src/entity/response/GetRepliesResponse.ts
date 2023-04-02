@@ -30,7 +30,7 @@ export class GetRepliesResponse {
    * @param channelName チャンネル名
    * @param replies リプライ一覧
    */
-  constructor(
+  public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     channelId: string,

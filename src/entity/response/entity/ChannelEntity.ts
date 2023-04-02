@@ -15,7 +15,7 @@ export class ChannelEntity {
    * @param name 表示名
    * @param isPrivate プライベートチャンネルか
    */
-  constructor(id: string, name: string, isPrivate: boolean) {
+  public constructor(id: string, name: string, isPrivate: boolean) {
     this.id = id;
     this.name = name;
     this.isPrivate = isPrivate;

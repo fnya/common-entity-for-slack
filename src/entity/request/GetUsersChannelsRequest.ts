@@ -20,7 +20,11 @@ export class GetUsersChannelsRequest {
    * @param userId ユーザー ID
    * @param accessToken アクセストークン
    */
-  constructor(requestType: RequestType, userId: string, accessToken: string) {
+  public constructor(
+    requestType: RequestType,
+    userId: string,
+    accessToken: string
+  ) {
     this.requestType = requestType;
     this.userId = userId;
     this.accessToken = accessToken;

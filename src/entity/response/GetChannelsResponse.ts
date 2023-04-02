@@ -22,7 +22,7 @@ export class GetChannelsResponse {
    * @param httpStatusCode HTTP ステータスコード
    * @param channels チャンネル一覧
    */
-  constructor(
+  public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     channels: ChannelEntity[]

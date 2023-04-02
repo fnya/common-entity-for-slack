@@ -16,7 +16,7 @@ export class RegisterTriggersRequest {
    * @param requestType リクエストタイプ
    * @param accessToken 管理者のアクセストークン
    */
-  constructor(requestType: RequestType, accessToken: string) {
+  public constructor(requestType: RequestType, accessToken: string) {
     this.requestType = requestType;
     this.accessToken = accessToken;
   }

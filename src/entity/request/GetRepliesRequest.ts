@@ -24,7 +24,7 @@ export class GetRepliesRequest {
    * @param parentTs メッセージの ts
    * @param accessToken アクセストークン
    */
-  constructor(
+  public constructor(
     requestType: RequestType,
     channelId: string,
     parentTs: string,

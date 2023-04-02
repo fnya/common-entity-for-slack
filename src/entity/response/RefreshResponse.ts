@@ -21,7 +21,7 @@ export class RefreshResponse {
    * @param httpStatusCode HTTP ステータスコード
    * @param accessToken JWT のアクセストークン
    */
-  constructor(
+  public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     accessToken: string

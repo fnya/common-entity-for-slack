@@ -11,7 +11,7 @@ export class ReactionEntity {
    * @param name リアクション名
    * @param count リアクション数
    */
-  constructor(name: string, count: number) {
+  public constructor(name: string, count: number) {
     this.name = name;
     this.count = count;
   }

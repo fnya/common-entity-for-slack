@@ -32,7 +32,7 @@ export class ChangeUserInformationRequest {
    * @param isAdmin 管理者フラグ(true:管理者/false:一般ユーザー)
    * @param initialized 初期化フラグ(falseのみ,指定されたらユーザーを初期化する)
    */
-  constructor(
+  public constructor(
     requestType: RequestType,
     accessToken: string,
     userId: string,

@@ -28,7 +28,7 @@ export class RegisterUserRequest {
    * @param channels 登録ユーザーの権限のあるプライベートチャンネルのリスト
    * @param accessToken 管理者のアクセストークン
    */
-  constructor(
+  public constructor(
     requestType: RequestType,
     email: string,
     isAdmin: string,

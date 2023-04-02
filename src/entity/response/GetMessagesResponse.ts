@@ -34,7 +34,7 @@ export class GetMessagesResponse {
    * @param messages メッセージ一覧
    * @param hasMore メッセージが残っているか(true:あり/false:なし
    */
-  constructor(
+  public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
     channelId: string,
