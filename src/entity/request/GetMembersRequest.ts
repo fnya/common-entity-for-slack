@@ -16,11 +16,7 @@ export class GetMembersRequest {
    * @param requestType リクエストタイプ
    * @param accessToken アクセストークン
    */
-  public constructor(
-    requestType: RequestType,
-    accessToken: string,
-    email: string
-  ) {
+  public constructor(requestType: RequestType, accessToken: string) {
     this.requestType = requestType;
     this.accessToken = accessToken;
   }
