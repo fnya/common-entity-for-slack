@@ -11,20 +11,20 @@ export class GetBlobResponse {
   /** HTTP ステータスコード */
   public httpStatusCode: HttpStatusCode;
 
-  /** Blob */
-  public blob: Blob;
+  /** Base64 でエンコードされた Blob */
+  public blob: string;
 
   /**
    *  コンストラクタ
    *
    * @param httpStatus HTTP ステータス
    * @param httpStatusCode HTTP ステータスコード
-   * @param blob Blob
+   * @param blob Base64 でエンコードされた Blob
    */
   public constructor(
     httpStatus: HttpStatus,
     httpStatusCode: HttpStatusCode,
-    blob: Blob
+    blob: string
   ) {
     this.httpStatus = httpStatus;
     this.httpStatusCode = httpStatusCode;
