@@ -1,9 +1,10 @@
 export const RequestType = {
   ChangePassword: 'ChangePassword',
   ChangeUserInformation: 'ChangeUserInformation',
+  GetBlob: 'GetBlob',
   GetChannels: 'GetChannels',
-  GetMessages: 'GetMessages',
   GetMembers: 'GetMembers',
+  GetMessages: 'GetMessages',
   GetReplies: 'GetReplies',
   GetUserInformation: 'GetUserInformation',
   GetUsersChannels: 'GetUsersChannels',
