@@ -17,6 +17,9 @@ export class LoginResponse {
   /** JWT のアクセストークン */
   public accessToken: string;
 
+  /** JWT アクセストークン有効期限 */
+  public accessTokenExpires: number;
+
   /** JWT のリフレッシュトークン */
   public refreshToken: string;
 
@@ -30,6 +33,7 @@ export class LoginResponse {
    * @param httpStatusCode HTTP ステータスコード
    * @param userId ユーザー ID
    * @param accessToken JWT のアクセストークン
+   * @param accessTokenExpires JWT アクセストークン有効期限
    * @param refreshToken JWT のリフレッシュトークン
    * @param refreshTokenExpires JWT のリフレッシュトークン有効期限
    */
@@ -38,6 +42,7 @@ export class LoginResponse {
     httpStatusCode: HttpStatusCode,
     userId: string,
     accessToken: string,
+    accessTokenExpires: number,
     refreshToken: string,
     refreshTokenExpires: number
   ) {
@@ -45,6 +50,7 @@ export class LoginResponse {
     this.httpStatusCode = httpStatusCode;
     this.userId = userId;
     this.accessToken = accessToken;
+    this.accessTokenExpires = accessTokenExpires;
     this.refreshToken = refreshToken;
     this.refreshTokenExpires = refreshTokenExpires;
   }
